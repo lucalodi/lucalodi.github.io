@@ -2,7 +2,8 @@
 <html>
 
 <title>LUCALODI</title>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 <style>
 html, body {
@@ -10,7 +11,12 @@ html, body {
 	position: relative;
 	margin: 0;
 	padding :0;
+	font-family: 'Poiret One', cursive;color:white !important;
 }
+
+a {color:#666666 !important;}
+a:hover {color:#FFFFFF !important;}
+
 #mainContent {
 	position:relative;
 	text-align:center;
@@ -23,11 +29,44 @@ html, body {
 	margin: 0 auto;
 }
 
+#profilePic {	
+	height: 200px;
+	width: 200px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	background: url("https://pbs.twimg.com/profile_images/419160321593724928/MbjBGHBM.jpeg");
+	background-size: 200px 200px; 
+	
+	-webkit-box-shadow: 0 0 0px 10px #262626;
+	box-shadow: 0 0 0px 10px #262626;
+	
+	margin: 64px auto;
+}
+
+h1 {
+	font-weight: normal;
+	color:white;
+}
+
+.socialTable {
+	margin: 0 auto;
+}
+
 </style>
 
 <body>
 	<div id="mainContent">
+		<div id="profilePic"></div>
 		
+		
+		
+		<table border="0" cellpadding="15" cellspacing="0" class="socialTable">
+			<tr>
+<!--				<td><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></td>
+				<td><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></td>-->
+				<td><a href="mailto:luca.lodi@icloud.com"><i class="fa fa-envelope fa-2x"></i></a></td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
