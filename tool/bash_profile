@@ -1,0 +1,71 @@
+#   -------------------------------
+#   ENVIRONMENT CONFIGURATION
+#   -------------------------------
+
+#   Forzo i colori
+#   ------------------------------------------------------------
+	export TERM="xterm-color"
+
+#   Cambio il Prompt
+#   ------------------------------------------------------------
+	export PS1="
+
+╔═╣ \e[0;32m@ \h\e[0m (\u) ╠════════════════════════════════════════
+║
+║   \w
+║
+╚═> "
+
+	export PS2="═> "
+
+
+#   -----------------------------
+#   ALIAS
+#   -----------------------------
+
+alias ll='ls -FGlAhp'
+
+alias rasp="ssh pi@lucalodi.ddns.net"
+alias blow="ssh llodi@dev.facile.it"
+
+alias mail="tpage NL.tt > NL.html
+printf '\e[0;32m✔ -----\e[0m NL ContactLab HTML\n'
+
+tpage NL_txt.tt > NL.txt
+printf '\e[0;32m✔ -----\e[0m NL ContactLab TXT\n'
+
+tpage --define perSito='1' NL.tt > NL_perSito.html
+printf '\e[0;32m✔ -----\e[0m NL Archivio HTML\n'
+
+tpage --define mailchimp='1' NL.tt > NL_mailChimp.html
+printf '\e[0;32m✔ -----\e[0m NL Mailchimp HTML\n'
+
+tpage --define mailchimp='1' NL_txt.tt > NL_mailChimp.txt 
+printf '\e[0;32m✔ -----\e[0m NL Mailchimp TXT\n'
+
+printf '
+
+'
+"
+
+#   -------------------------------
+#   FILE AND FOLDER MANAGEMENT
+#   -------------------------------
+#   cdf:  'Cd's to frontmost window of MacOS Finder
+#   ------------------------------------------------------
+
+	cdf () {
+		currFolderPath=$( /usr/bin/osascript <<EOT
+			tell application "Finder"
+				try
+			set currFolder to (folder of the front window as alias)
+				on error
+			set currFolder to (path to desktop folder as alias)
+				end try
+				POSIX path of currFolder
+			end tell
+EOT
+		)
+		echo "cd to \"$currFolderPath\""
+		cd "$currFolderPath"
+	}
