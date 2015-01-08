@@ -23,6 +23,26 @@
 #	ALIAS
 #-----------------------------
 
+gggASCII(){
+cat <<"EOT"
+                _                        
+                \`*-.                    
+                 )  _`-.                 
+                .  : `. .                
+                : _   '  \               
+                ; *` _.   `*-._          
+                `-.-'          `-.       
+                  ;       `       `.     
+                  :.       .        \    
+                  . \  .   :   .-'   .   
+                  '  `+.;  ;  '      :   
+                  :  '  |    ;       ;-. 
+                  ; '   : :`-:     _.`* ;
+               .*' /  .*' ; .*`- +'  `*' 
+               `*-*   `*-*  `*-*'
+EOT
+}
+
 alias ll='ls -FGlAhp'
 
 alias rasp="ssh pi@lucalodi.ddns.net"
@@ -43,9 +63,7 @@ printf '\e[0;32m✔ -----\e[0m NL Mailchimp HTML\n'
 tpage --define mailchimp='1' NL_txt.tt > NL_mailChimp.txt 
 printf '\e[0;32m✔ -----\e[0m NL Mailchimp TXT\n'
 
-printf '
-
-'
+gggASCII
 "
 
 #-------------------------------
